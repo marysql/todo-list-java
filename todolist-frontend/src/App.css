@@ -1,0 +1,157 @@
+/* Reset de margin e padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal */
+.app-container {
+  width: 100%;
+  max-width: 500px; /* Largura máxima da aplicação */
+  margin: 40px auto; /* Centraliza a aplicação */
+  padding: 20px;
+  background-color: #fff; /* Cor de fundo do container */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+}
+
+/* Título da aplicação */
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Cor discreta */
+}
+
+/* Estilizando o formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Inputs e textarea */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff; /* Cor do foco */
+  outline: none;
+}
+
+/* Botão do formulário */
+form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de tarefas */
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+
+li input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para os campos de edição */
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button + button {
+  background-color: #dc3545;
+}
+
+button + button:hover {
+  background-color: #c82333;
+}
