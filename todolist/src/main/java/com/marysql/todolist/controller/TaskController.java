@@ -21,7 +21,7 @@ import com.marysql.todolist.repository.TarefaRepository;
 
 @RestController
 @RequestMapping("/tarefas")
-@CrossOrigin(origins = "https://todo-list-java.vercel.app")
+@CrossOrigin(origins = "https://todo-list-java-xi.vercel.app")
 public class TaskController {
 
   @Autowired
