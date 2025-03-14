@@ -25,7 +25,7 @@ function TarefaForm({ criarTarefa }: TarefaFormProps) {
     <form onSubmit={handleSubmit}>
       <h2>Adicionar Tarefa</h2>
       <div>
-        <input
+        <input className='titletask'
           type="text"
           placeholder="Título"
           value={titulo}

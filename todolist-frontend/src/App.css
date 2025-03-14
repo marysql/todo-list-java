@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Reset de margin e padding */
 *,
 *::before,
@@ -6,24 +7,34 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #343139;
+}
 /* Container principal */
 .app-container {
   width: 100%;
   max-width: 500px; /* Largura máxima da aplicação */
   margin: 40px auto; /* Centraliza a aplicação */
   padding: 20px;
-  background-color: #fff; /* Cor de fundo do container */
+  background-color: #343139; /* Cor de fundo do container */
+  border: 1px solid #ff00bf;
   border-radius: 8px; /* Bordas arredondadas */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
 }
 
 /* Título da aplicação */
 h1 {
-  font-size: 1.8rem;
+
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #333; /* Cor discreta */
+  color: #9d9c9d; /* Cor discreta */
 }
 
 /* Estilizando o formulário */
@@ -36,7 +47,7 @@ form {
 form h2 {
   font-size: 1.2rem;
   text-align: center;
-  color: #333;
+  color: #9d9c9d;
 }
 
 /* Inputs e textarea */
@@ -45,21 +56,22 @@ form textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #ff00bf !important;
   border-radius: 5px;
+  background-color: transparent;
+  color: #ccc;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: #007bff; /* Cor do foco */
-  outline: none;
+    outline: none;
 }
 
 /* Botão do formulário */
 form button {
   padding: 10px;
-  background-color: #007bff;
-  color: white;
+  background-color: #ff00bf;
+  color: #343139;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -68,10 +80,10 @@ form button {
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: #af0083;
 }
 
-/* Lista de tarefas */
+
 /* Lista de tarefas */
 ul {
   list-style: none;
@@ -83,17 +95,21 @@ ul {
 }
 
 li {
+  text-align: center;
   display: flex;
   flex-direction: column;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: transparent;
+  border: 1px solid #ff00bf;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
+  color: #9d9c9d;
+  
 }
 
 li:hover {
-  background-color: #f0f0f0;
+ 
   transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
@@ -104,7 +120,7 @@ li input[type="checkbox"] {
 
 button {
   padding: 8px 15px;
-  background-color: #007bff;
+  background-color: #ff00bf;
   color: white;
   border: none;
   border-radius: 5px;
@@ -115,7 +131,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #af0083;
 }
 
 /* Estilos para os campos de edição */
@@ -123,20 +139,22 @@ input[type="text"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ff00bf;
+  background-color: transparent;
+  color: #ccc;
   border-radius: 5px;
   font-size: 1rem;
 }
 
 input[type="text"]:focus {
-  border-color: #007bff;
+  border-color: #af0083;
   outline: none;
 }
 
 button {
   padding: 8px 15px;
-  background-color: #007bff;
-  color: white;
+  background-color: #ff00bf;
+  color: #343139;
   border: none;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -145,13 +163,33 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
-}
+  background-color: #af0083;}
 
 button + button {
-  background-color: #dc3545;
+  color: #9d9c9d;
+  background-color: transparent;
+  border: 1px solid #ff00bf;
 }
 
 button + button:hover {
-  background-color: #c82333;
+  background-color: transparent;
+border:1px solid #af0083;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px; /* Espaço entre o checkbox e o texto */
+  width: 20px; /* Tamanho fixo do checkbox */
+  height: 20px; /* Tamanho fixo do checkbox */
+}
+
+.status-text {
+  margin-bottom: auto;
+  line-height: 20px; /* Alinha o texto com a altura do checkbox */
+  vertical-align: middle; /* Alinha o texto ao meio do checkbox */
 }

@@ -54,19 +54,30 @@ function TarefaList({ tarefas, atualizarTarefa, deletarTarefa }: TarefaListProps
             </>
           ) : (
             <>
-              <input
-                type="checkbox"
-                checked={tarefa.concluida}
-                onChange={() =>
-                  tarefa.id !== undefined &&
-                  atualizarTarefa(tarefa.id, { ...tarefa, concluida: !tarefa.concluida })
-                }
-              />
+
+              <div className="checkbox-container">
+                <input
+                  type="checkbox"
+                  checked={tarefa.concluida}
+                  onChange={() =>
+                    tarefa.id !== undefined &&
+                    atualizarTarefa(tarefa.id, { ...tarefa, concluida: !tarefa.concluida })
+                  }
+                   className="checkbox"
+                />
+                <span className="status-text">
+                  {tarefa.concluida ? 'Finalizada' : 'Em processo'}
+                </span>
+              </div>
+
               <span>{tarefa.titulo}</span> - <span>{tarefa.descricao}</span>
               <button onClick={() => iniciarEdicao(tarefa)}>Editar</button>
               <button onClick={() => tarefa.id !== undefined && deletarTarefa(tarefa.id)}>
                 Excluir
               </button>
+
+
+
             </>
           )}
         </li>
