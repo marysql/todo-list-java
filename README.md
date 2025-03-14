@@ -34,7 +34,7 @@ Este projeto está organizado em duas pastas principais: `todolist` para o backe
 
 1. Clone o repositório principal:
    ```bash
-   git clone https://github.com/your-username/todolist.git
+   git clone https://github.com/MarySql/todo-list-java
 
 
 ![screenshot-1741914994991](https://github.com/user-attachments/assets/9354fe0c-8070-48b8-9be9-d3926bafc502)
