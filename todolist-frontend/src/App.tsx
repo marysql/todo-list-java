@@ -5,7 +5,8 @@ import axios from 'axios';
 import { Tarefa } from './types/Tarefa';
 import './App.css';
 
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = 'https://todo-list-java-production.up.railway.app';
+
 
 function App() {
   const [tarefas, setTarefas] = useState<Tarefa[]>([]);
