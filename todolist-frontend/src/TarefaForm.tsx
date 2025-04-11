@@ -23,7 +23,7 @@ function TarefaForm({ criarTarefa }: TarefaFormProps) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Adicionar Tarefa</h2>
+     
       <div>
         <input className='titletask'
           type="text"
